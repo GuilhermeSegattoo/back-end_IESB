@@ -3,9 +3,7 @@
 
 - Primeira aula teve conceitos básicos de git e github.
 
-- Na segunda aula fizemos um programa em JavaScript que interage com o usuário por meio do terminal, usando a biblioteca readline-sync.
--  Ele exibe um menu com opções numeradas e permite que o usuário escolha uma dessas opções digitando o número correspondente.
-
+- Na segunda aula fizemos um programa em JavaScript que interage com o usuário por meio do terminal, usando a biblioteca readline-sync, ele exibe um menu com opções numeradas e permite que o usuário escolha uma dessas opções digitando o número correspondente.
 Se o usuário digitar '1', o programa chama a função listar() da controladora.
 Se o usuário digitar '2', o programa chama a função criar() da controladora.
 Se o usuário digitar '3', o programa chama a função buscar() da controladora.
