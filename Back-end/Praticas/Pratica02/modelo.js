@@ -1,4 +1,3 @@
-const readline = require('readline-sync');
 const controladora = require('./controladora');
 
 export class contato{

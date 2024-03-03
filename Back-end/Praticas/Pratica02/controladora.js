@@ -1,8 +1,4 @@
-const readline = require('readline-sync');
-import { contato, contato } from './modelo';
-
-const contato = new contato(nome, email, telefone);
-
+const Contato = require("./modelo.js");
 const contatos = [];
 
 export function adicionarContato(nome, email, telefone){

@@ -22,20 +22,45 @@ function escolherOpcao(opcao){
           controladora.listarContatos();
           break;
         case '3' :
-          controladora.buscarContatos();  
+          const nomeContato = readline.question("Digite o nome do contato: ");
+          const contato = controladora.buscarContatos(nomeContato);
+
+          if (contato) {
+              console.log(contato);
+          } else {
+            console.log("Contato Não encontrado.");
+          };
           break;
         case '4' :
-          controladora.atualizarContato();  
+          const nomeAtualizar = readline.question("Digite o NOME do contato para atualizar: ");
+          const contatoBuscar = controladora.buscarContatos(nomeAtualizar);
+          if (contatoBuscar){
+            const emailNovo = readline.question("Digite o novo email: ");
+            const telefoneNovo = readline.question("Digite o novo telefone: ");
+            const nomeNovo = readline.question("Digite o novo nome: ");
+            controladora.atualizarContato(emailNovo,telefoneNovo,nomeNovo); 
+          } else {
+            console.log("contato não encontrado!");
+          }
           break;
         case '5' :
-          controladora.removerContato();  
+          const nomeRM = readline.question("Informe o nome do contato para remover: ");
+          controladora.removerContato(nomeRM);  
           break;
-        case '6' : Process.exit(0);
+        case '6' : Process.exit();
         default: console.log('Opcao Invalida');
        
        
     }
-    readline.question("Pressione ENTER para continuar...");
+    
 }
 
-// falta terminar
+function main() {
+  while (true) {
+    menu();
+    const opcao = readline.question("Entre com uma opcao: ");
+    escolherOpcao(opcao);
+  }
+}
+
+main();
