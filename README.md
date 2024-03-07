@@ -25,6 +25,11 @@ backend aulas iesb:
 
 Após cada escolha, o programa espera que o usuário pressione "Enter" antes de exibir o menu novamente e permitir que o usuário faça outra escolha, o programa continuará em um loop infinito até que o usuário escolha a opção de sair.
 
+## Pasta pratica02
+
+- Na segunda aula pratica, fizemos uma aula pratica de acordo com um pedido feito pelo professor, fizemos uma implementação de funcionalidades CRUD (Create, Read, Update, Delete) sobre contatos, criar um index para interagir com o usuário através de um menu de opções e o programa oferece um conjunto de instruções para criar, gerenciar e versionar um projeto Node.js com operações básicas de manipulação de dados, bem semelhante com o projeto da aula02.
+
 ## Pasta aula03
 
-- Na terceira aula fizemos uma aula pratica de acordo com um pedido feito pelo professor, fizemos uma implementação de funcionalidades CRUD (Create, Read, Update, Delete) sobre contatos, criar um index para interagir com o usuário através de um menu de opções e o programa oferece um conjunto de instruções para criar, gerenciar e versionar um projeto Node.js com operações básicas de manipulação de dados, bem semelhante com o projeto da aula02.
+- Na terceira aula, aprendemos conceitos básicos de API REST.
+-  Aprendemos os métodos: GET, PUT, PUST, DELETE. Utilizamos a ferramenta do vscode chamada "Thunder Cliente" para fazer as requisições e utilizamos o json para guardar nosso objeto "Produtos" contendo nome do produto, preço e id.
