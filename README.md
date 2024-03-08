@@ -33,3 +33,7 @@ Após cada escolha, o programa espera que o usuário pressione "Enter" antes de 
 
 - Na terceira aula, aprendemos conceitos básicos de API REST.
 -  Aprendemos os métodos: GET, PUT, PUST, DELETE. Utilizamos a ferramenta do vscode chamada "Thunder Cliente" para fazer as requisições e utilizamos o json para guardar nosso objeto "Produtos" contendo nome do produto, preço e id.
+
+## Pasta Aula04
+
+- Na Quarta aula, fizemos nossa primeira criação de uma API usando o framework express para js e utilizamos o nodemon para testar automaticamente. Aprendi a testar o código com o jest --watchAll.
