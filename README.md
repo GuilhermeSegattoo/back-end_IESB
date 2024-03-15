@@ -37,3 +37,11 @@ Após cada escolha, o programa espera que o usuário pressione "Enter" antes de 
 ## Pasta Aula04
 
 - Na Quarta aula, fizemos nossa primeira criação de uma API usando o framework express para js e utilizamos o nodemon para testar automaticamente. Aprendi a testar o código com o jest --watchAll.
+
+## Pasta pratica04
+
+- Tive a quinta aula e no começo fizemos um exercio de confirmação de acordo com um manual do professor para criar testes da API por meio do npm install --save-dev jest supertest. Criamos o index.test.js para testar as respostas. Get, Put, Post e Delete.
+
+## Pasta aula05
+
+- Final da aula, estamos começando a criar um modelo de API que busca o produtos. fizemos o npm install --save-dev jest supertest para testar assim como o dever anterior e ainda vamos finalizar...
