@@ -1,6 +1,6 @@
  openapi: 3.0.0
  info: 
-   title: Minha API REST
+   title: Minha API REST teste
    description: Uma API REST desenvolvida com Express.
    version: 0.1.0
  servers:
