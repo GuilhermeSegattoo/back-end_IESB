@@ -5,24 +5,49 @@ info:
 tags:
   - produtos
 paths:
+  /produtos/{id}:
+    get:
+      tags:
+        - produtos
+      parameters:
+        - in: path
+          name: id
+          type: string
+      responses: 
+        200:
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Produto'     
   /produtos:
+    get:
+      tags: 
+        - produtos
+      responses: 
+        200:
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Produto'
     post:
       tags:
         - produtos
       requestBody:
         content:
-          application-json:
+          application/json:
             schema:
               $ref: '#/components/schemas/Produto'
       responses:
         201:
           content:
-            application-json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Produto'
         422:
           content:
-            application-json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Mensagem'
 components:
