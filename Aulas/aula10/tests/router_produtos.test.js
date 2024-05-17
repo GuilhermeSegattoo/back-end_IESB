@@ -36,6 +36,18 @@ let id = null;
        expect(res.type).toBe("application/json");
       });
 
+      test("Deve retornar 404 e um JSON no GET /produtos/id", async () => {
+       const res = await req.get('/produtos/663cd3ce3223adbb5b9c9aeb ');
+       expect(res.status).toBe(404);
+       expect(res.type).toBe("application/json")
+      });
+
+      test("Deve retornar 200 no PUT e um JSON /Produtos/id", async()=>{
+       const res = await req.put(`/produtos/${id}`).send({nome: "Banana nanica", preco: 7.5});
+       expect(res.status).toBe(200);
+       expect(res.type).toBe("application/json")
+      });
+
 
 });  
    

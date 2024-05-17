@@ -18,7 +18,17 @@ paths:
           content: 
             application/json:
               schema:
-                $ref: '#/components/schemas/Produto'     
+                $ref: '#/components/schemas/Produto'
+        404:
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/Produto' 
+        400:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Produto'                       
   /produtos:
     get:
       tags: 
