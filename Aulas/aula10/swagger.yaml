@@ -5,42 +5,7 @@ info:
 tags:
   - produtos
 paths:
-  /produtos/{id}:
-    get:
-      tags:
-        - produtos
-      parameters:
-        - in: path
-          name: id
-          type: string
-      responses: 
-        200:
-          content: 
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Produto'
-        404:
-          content:
-            application/json:
-              schema:
-                  $ref: '#/components/schemas/Produto' 
-        400:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Produto'                       
   /produtos:
-    get:
-      tags: 
-        - produtos
-      responses: 
-        200:
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Produto'
     post:
       tags:
         - produtos
@@ -60,6 +25,89 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Mensagem'
+    get:
+      tags:
+        - produtos
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Produto'
+  /produtos/{id}:
+    get: 
+      tags:
+        - produtos
+      parameters:
+        - in: path
+          name: id 
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Produto'
+      responses: 
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Produto'
+        400: 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mensagem'
+        404: 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mensagem'
+    put: 
+      tags:
+        - produtos
+      parameters:
+        - in: path
+          name: id 
+          type: string
+      responses: 
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Produto'
+        404: 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mensagem'
+        422: 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mensagem'
+    delete: 
+      tags:
+        - produtos
+      parameters:
+        - in: path
+          name: id 
+          type: string
+      responses: 
+        200:
+          content:
+        400: 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mensagem'
+        404: 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mensagem'
 components:
   schemas:
     Produto:
@@ -72,5 +120,3 @@ components:
     Mensagem:
       type: object
       properties:
-        msg:
-          type: string
